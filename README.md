@@ -5,8 +5,20 @@ AWS Three-Tier Architecture –Project (Increment and Decrement Counter applicat
 aws-3tier-architecture/
 │
 ├── README.md
+├── .gitignore
+│
 ├── architecture/
-│   └── aws-3tier-architecture.drawio
+│   ├── aws-3tier-architecture.drawio
+│   └── aws-3tier-architecture.png
+│
+├── screenshots/
+│   ├── terraform-apply-success.png
+│   ├── vpc.png
+│   ├── subnets.png
+│   ├── ec2-instances.png
+│   ├── alb-targets-healthy.png
+│   ├── rds-available.png
+│   └── application.png
 │
 ├── docs/
 │   ├── technical-design.md
@@ -14,22 +26,19 @@ aws-3tier-architecture/
 │   ├── security-controls.md
 │   └── operational-considerations.md
 │
-├── terraform/
-│   ├── provider.tf
-│   ├── variables.tf
-│   |___IGW.tf
-│   ├── VPC.tf
-│   ├── Subnets.tf
-│   ├── sg.tf
-│   ├── rt.tf
-│   ├── ec2.tf
-│   ├── rdsdb.tf
-│   ├── ld.tf
-│   ├── data1.sh
-│   ├── data2.sh
-│   \ __ ec2.tf   
-│
-└── .gitignore
+└── terraform/
+    ├── provider.tf
+    ├── variables.tf
+    ├── VPC.tf
+    ├── Subnets.tf
+    ├── IGW.tf
+    ├── sg.tf
+    ├── rt.tf
+    ├── ec2.tf
+    ├── rdsdb.tf
+    ├── ld.tf
+    ├── data1.sh
+    └── data2.sh
 
 
 Deployment Instructions.
