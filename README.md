@@ -1,8 +1,10 @@
 # aws-3tier-terraform
 AWS Three-Tier Architecture –Project (Increment and Decrement Counter application.)
 
+## Repository Structure
 
-aws-3tier-architecture/
+```text
+aws-3tier-terraform/
 │
 ├── README.md
 ├── .gitignore
@@ -39,6 +41,7 @@ aws-3tier-architecture/
     ├── ld.tf
     ├── data1.sh
     └── data2.sh
+```
 
 
 Deployment Instructions.
