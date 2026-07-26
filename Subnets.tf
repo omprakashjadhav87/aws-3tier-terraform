@@ -2,13 +2,13 @@
 
 resource "aws_subnet" "public-subnet1" {
 
-  vpc_id                  = aws_vpc.BluePeak.id
+  vpc_id = aws_vpc.BluePeak.id
 
-  cidr_block              = var.subnet1_cidr
+  cidr_block = var.subnet1_cidr
 
-  map_public_ip_on_launch = "false"
+  map_public_ip_on_launch = true
 
-  availability_zone       = "us-east-1a"
+  availability_zone = "us-east-1a"
 
   tags = {
 
@@ -22,13 +22,13 @@ resource "aws_subnet" "public-subnet1" {
 
 resource "aws_subnet" "public-subnet2" {
 
-  vpc_id                  = aws_vpc.BluePeak.id
+  vpc_id = aws_vpc.BluePeak.id
 
-  cidr_block              = var.subnet2_cidr
+  cidr_block = var.subnet2_cidr
 
-  map_public_ip_on_launch = "false"
+  map_public_ip_on_launch = true
 
-  availability_zone       = "us-east-1b"
+  availability_zone = "us-east-1b"
 
   tags = {
 
@@ -42,9 +42,9 @@ resource "aws_subnet" "public-subnet2" {
 
 resource "aws_subnet" "private-subnet1" {
 
-  vpc_id            = aws_vpc.BluePeak.id
+  vpc_id = aws_vpc.BluePeak.id
 
-  cidr_block        = var.subnet3_cidr
+  cidr_block = var.subnet3_cidr
 
   availability_zone = "us-east-1b"
 
@@ -60,9 +60,9 @@ resource "aws_subnet" "private-subnet1" {
 
 resource "aws_subnet" "private-subnet2" {
 
-  vpc_id            = aws_vpc.BluePeak.id
+  vpc_id = aws_vpc.BluePeak.id
 
-  cidr_block        = var.subnet4_cidr
+  cidr_block = var.subnet4_cidr
 
   availability_zone = "us-east-1c"
 
@@ -78,9 +78,9 @@ resource "aws_subnet" "private-subnet2" {
 
 resource "aws_subnet" "private-subnet3" {
 
-  vpc_id            = aws_vpc.BluePeak.id
+  vpc_id = aws_vpc.BluePeak.id
 
-  cidr_block        = var.subnet5_cidr
+  cidr_block = var.subnet5_cidr
 
   availability_zone = "us-east-1b"
 
@@ -96,9 +96,9 @@ resource "aws_subnet" "private-subnet3" {
 
 resource "aws_subnet" "private-subnet4" {
 
-  vpc_id            = aws_vpc.BluePeak.id
+  vpc_id = aws_vpc.BluePeak.id
 
-  cidr_block        = var.subnet6_cidr
+  cidr_block = var.subnet6_cidr
 
   availability_zone = "us-east-1c"
 

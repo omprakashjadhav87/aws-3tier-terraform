@@ -1,5 +1,26 @@
-# aws-3tier-terraform
-AWS Three-Tier Architecture –Project (Increment and Decrement Counter application.)
+# AWS-3tier-terraform
+
+#AWS Three-Tier Architecture –Project (Increment and Decrement Counter application.)
+
+```text
+
+Internet
+   |
+   v
+Application Load Balancer
+   |
+   v
+Auto Scaling Group
+   |
+   +── EC2 Web Instance 1
+   |
+   +── EC2 Web Instance 2
+   |
+   v
+RDS MySQL
+
+```text
+
 
 ## Repository Structure
 
@@ -37,14 +58,17 @@ aws-3tier-terraform/
     ├── sg.tf
     ├── rt.tf
     ├── ec2.tf
+    ├── asg.tf
+    ├── cloudwatch.tf
     ├── rdsdb.tf
-    ├── ld.tf
+    ├── lb.tf
     ├── data1.sh
-    └── data2.sh
+    
+
 ```
 
 
-Deployment Instructions.
+#Deployment Instructions.
 
 Prerequisites
 terraform version
@@ -54,12 +78,12 @@ Configure AWS credentials:
 
 aws configure
 
-Verify:
+#Verify:
 
 aws sts get-caller-identity
 
 
-Deploy
+#Deploy
 
 terraform init
 terraform validate
@@ -81,7 +105,7 @@ lb_dns_name
 
 Open:
 
-http://<ALB-DNS-NAME>
+#http://<ALB-DNS-NAME>
 
 Destroy
 

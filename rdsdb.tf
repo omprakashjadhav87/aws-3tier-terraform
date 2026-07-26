@@ -5,7 +5,7 @@
 
 resource "aws_db_subnet_group" "rds-subnet" {
 
-  name       = "rds-subnet"
+  name = "rds-subnet"
 
   subnet_ids = [aws_subnet.private-subnet1.id, aws_subnet.private-subnet2.id]
 
@@ -19,23 +19,23 @@ resource "aws_db_subnet_group" "rds-subnet" {
 
 resource "aws_db_instance" "rds-subnet" {
 
-  allocated_storage      = 10
+  allocated_storage = 10
 
-  db_subnet_group_name   = aws_db_subnet_group.rds-subnet.id
+  db_subnet_group_name = aws_db_subnet_group.rds-subnet.id
 
-  engine                 = "mysql"
+  engine = "mysql"
 
-  engine_version         = "8.0.46"
+  engine_version = "8.0.46"
 
-  instance_class         = "db.t3.micro"
+  instance_class = "db.t3.micro"
 
-  multi_az               = true
+  multi_az = true
 
-  username               = "admin"
+  username = "admin"
 
-  password               = "password"
+  password = "password"
 
-  skip_final_snapshot    = true
+  skip_final_snapshot = true
 
   vpc_security_group_ids = [aws_security_group.db-sg.id]
 
